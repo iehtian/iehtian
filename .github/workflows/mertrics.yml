@@ -15,11 +15,14 @@ jobs:
           user: iehtian
           template: classic
           base: ""
+
           plugin_habits: yes
           plugin_habits_facts: no
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
           plugin_habits_days: 90
-          plugin_habits_from: 500
+          plugin_habits_from: 1000
           plugin_habits_trim: no
+          plugin_habits_languages_threshold:
+
           filename: github-metrics.svg
