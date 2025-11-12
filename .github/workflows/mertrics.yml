@@ -19,6 +19,6 @@ jobs:
           plugin_habits_facts: no
           plugin_habits_charts: yes # ✅ 必须明确设置为 yes
           plugin_habits_charts_type: classic
-          plugin_habits_days: 14
+          plugin_habits_days: 90
           plugin_habits_from: 200
           filename: github-metrics.svg
