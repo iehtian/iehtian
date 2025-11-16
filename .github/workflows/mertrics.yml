@@ -13,6 +13,7 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKAPI_API_KEY }}
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          WAKAPI_BASE_URL: "http://wakapi.陈莹.我爱你/api"
           SHOW_LINES_OF_CODE: "True"
           SHOW_PROFILE_VIEWS: "False"
           SHOW_COMMIT: "True"
