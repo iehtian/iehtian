@@ -7,10 +7,10 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: muety/wakapi-readme-stats@master # Wakapi 作者的版本
+      - uses: athul/waka-readme@master
         with:
-          WAKAPI_URL: ${{ secrets.WAKAPI_URL }}
-          WAKAPI_API_KEY: ${{ secrets.WAKAPI_API_KEY }}
+          WAKATIME_API_KEY: ${{ secrets.WAKAPI_API_KEY }}
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
           API_BASE_URL: ${{ secrets.WAKAPI_URL }} # 从 Secrets 读取
           SHOW_COMMIT: "True"
           SHOW_LANGUAGE: "True"
