@@ -3,14 +3,21 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
+      - name: Test connection
+        run: |
+          echo "Testing wakapi proxy..."
+          curl -v http://xn--wakapi.-ur9h635belax36b.xn--6qq986b3xl/api/v1/users/current/stats/last_7_days || true
+
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKAPI_API_KEY }}
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
-          API_BASE_URL: ${{ secrets.WAKAPI_URL }} # 从 Secrets 读取
+          # 使用 Punycode 编码的域名
+          API_BASE_URL: http://xn--wakapi.-ur9h635belax36b.xn--6qq986b3xl
           SHOW_COMMIT: "True"
           SHOW_LANGUAGE: "True"
